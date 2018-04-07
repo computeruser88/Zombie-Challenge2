@@ -108,7 +108,7 @@ function room2() {
                 room1();
             } else {
                 console.log("You shouldn't be resting here.");
-                fight("A zombie", 10);
+                fight("A zombie", 20);
                 if (playerHealth > 0) {
                     room2();
                 }
@@ -188,7 +188,7 @@ function room4() {
                 room3();
             } else {
                 console.log("You shouldn't be resting here.");
-                fight("A zombie", 10);
+                fight("A zombie", 20);
                 if (playerHealth > 0) {
                     room4();
                 }
@@ -199,7 +199,7 @@ function room4() {
 }
 function room5() {
     console.log("The door to your south slammed shut. There is no escape!");
-    fight("The Alpha Zombie", 300);
+    fight("The Alpha Zombie", 400);
     var playAgain = {
         type: "confirm",
         name: "playAgain",
