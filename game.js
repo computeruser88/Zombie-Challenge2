@@ -10,7 +10,7 @@ function main() {
     console.log("Zombie Challenge 2: The Inhabitants");
     console.log("-----------------------------------\n");
     weapon = "fists";
-    weaponDamage = 1;
+    weaponDamage = 2;
     hasKey = false;
     playerHealth = 300;
     killCount = 0;
