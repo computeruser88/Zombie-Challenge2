@@ -306,7 +306,7 @@ function room8() {
                     console.log("You discarded your " + weapon + ".");
                 }
                 weapon = "kitchen knife";
-                weaponDamage = 10;
+                weaponDamage = 20;
                 console.log("You picked up the " + weapon + ".");
                 inquirer.prompt(direction).then(answer => {
                     if (answer.direction === "north") {
