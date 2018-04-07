@@ -63,7 +63,7 @@ function room1() {
         choices: ["east", "west"],
         message: "You can go east or west from here."
     }
-    if (Math.floor(Math.random() * 5) === 1) {
+    if (Math.floor(Math.random() * 4) + 1 === 1) {
         fight("A zombie", 10);
     }
     if (playerHealth > 0) {
@@ -149,7 +149,7 @@ function room3() {
         choices: ["north", "east", "south"],
         message: "You can go north, east, or south from here."
     }
-    if (Math.floor(Math.random() * 5 + 1) === 3) {
+    if (Math.floor(Math.random() * 4) + 1 === 3) {
         fight("A zombie", 10);
     }
     if (playerHealth > 0) {
@@ -207,6 +207,7 @@ function room5() {
     }
     if (playerHealth > 0) {
         console.log("You have survived the Zombie Challenge. Congratulations, you're still alive!");
+        console.log("You killed "+ killCount + " zombies.");
         inquirer.prompt(playAgain).then(answer => {
             if (answer.playAgain) {
                 main();
@@ -295,7 +296,7 @@ function room8() {
         choices: ["west", "north"],
         message: "You can go west or north from here."
     }
-    if (Math.floor(Math.random() * 5) === 1) {
+    if (Math.floor(Math.random() * 4) + 1 === 1) {
         fight("A zombie", 10);
     }
     if (playerHealth > 0) {
