@@ -111,7 +111,7 @@ function room2() {
                 room1();
             } else {
                 console.log("You shouldn't be resting here.");
-                fight("A zombie", 20);
+                fight("A zombie giant", 50);
                 if (playerHealth > 0) {
                     room2();
                 }
@@ -133,7 +133,7 @@ function room2() {
                     room1();
                 } else {
                     console.log("You shouldn't be resting here.");
-                    fight("A zombie", 10);
+                    fight("A zombie giant", 50);
                     if (playerHealth > 0) {
                         room2();
                     }
@@ -153,7 +153,7 @@ function room3() {
         message: "You can go north, east, or south from here."
     }
     if (Math.floor(Math.random() * 4) + 1 === 3) {
-        fight("A zombie", 10);
+        fight("A zombie", 25);
     }
     if (playerHealth > 0) {
         inquirer.prompt(direction).then(answer => {
@@ -191,7 +191,7 @@ function room4() {
                 room3();
             } else {
                 console.log("You shouldn't be resting here.");
-                fight("A zombie", 20);
+                fight("A zombie giant", 50);
                 if (playerHealth > 0) {
                     room4();
                 }
@@ -202,7 +202,7 @@ function room4() {
 }
 function room5() {
     console.log("The door to your south slammed shut. There is no escape!");
-    fight("The Alpha Zombie", 400);
+    fight("The Alpha Zombie", 450);
     var playAgain = {
         type: "confirm",
         name: "playAgain",
@@ -300,7 +300,7 @@ function room8() {
         message: "You can go west or north from here."
     }
     if (Math.floor(Math.random() * 3) + 1 === 1) {
-        fight("A zombie", 10);
+        fight("A zombie", 30);
     }
     if (playerHealth > 0) {
         inquirer.prompt(pickUpKnife).then(answer => {
