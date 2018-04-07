@@ -118,7 +118,7 @@ function room2() {
         inquirer.prompt(openTreasureChest).then(answer => {
             if (answer.openTreasureChest) {
                 console.log("You have found a chainsaw! You discarded your " + weapon + " and picked it up.");
-                weapon = "sword";
+                weapon = "chainsaw";
                 weaponDamage = 100;
                 console.log("Your key broke.");
                 hasKey = false;
@@ -245,7 +245,7 @@ function room6() {
         inquirer.prompt(openTreasureChest).then(answer => {
             if (answer.openTreasureChest) {
                 console.log("You have found a sword! You discarded your " + weapon + " and picked it up.");
-                weapon = "chainsaw";
+                weapon = "sword";
                 weaponDamage = 50;
                 console.log("Your key broke.");
                 hasKey = false;
