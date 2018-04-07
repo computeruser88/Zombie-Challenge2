@@ -77,7 +77,7 @@ function room1() {
                 }
                 weapon = "large stick";
                 weaponDamage = 12;
-                console.log("You picked up the large stick. It has a good heft to it.");
+                console.log("You picked up the large stick. It has a decent heft to it.");
             }
             inquirer.prompt(direction).then(answer => {
                 if (answer.direction === "east") {
