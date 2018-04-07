@@ -26,8 +26,8 @@ function room0() {
     var direction = {
         type: "list",
         name: "direction",
-        choices: ["south", "west"],
-        message: "You can move south or west:"
+        choices: ["south", "east"],
+        message: "You can move south or east:"
     }
     if (Math.floor(Math.random() * 5) === 1) {
         fight("A zombie", 10);
@@ -336,7 +336,7 @@ function fight(zombieType, zombieHealth) {
         console.log("You attacked and missed!");
     }
     if (zombieHealth > 0) {
-        var zombieAttackNumber = Math.floor(Math.random() * zombieHealth) + 1;
+        var zombieAttackNumber = Math.floor(Math.random() * (zombieHealth / 2)) + 1;
         console.log("Oh no! The zombie slashed you with " + zombieAttackNumber + " damage.\n");
         playerHealth -= zombieAttackNumber;
         console.log("You have " + playerHealth + " health left. The zombie has " + zombieHealth + " health left.\n");
