@@ -209,7 +209,7 @@ function room5() {
         message: "Play again Y/N?"
     }
     if (playerHealth > 0) {
-        console.log("You have survived the Zombie Challenge. Congratulations, you're still alive!");
+        console.log("You have survived the Zombie Challenge. Congratulations!");
         console.log("You killed " + killCount + " zombies.");
         inquirer.prompt(playAgain).then(answer => {
             if (answer.playAgain) {
