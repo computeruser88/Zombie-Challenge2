@@ -213,7 +213,7 @@ function room5() {
                 console.log("Thanks for playing!");
                 return true;
             }
-        })
+        });
     }
 }
 function room6() {
@@ -342,7 +342,19 @@ function fight(zombieType, zombieHealth) {
         if (playerHealth <= 0) {
             console.log("Game over. You are dead.\n");
             console.log("You managed to kill " + killCount + " zombie(s).\n");
-            return true;
+            var playAgain = {
+                type: "confirm",
+                name: "playAgain",
+                message: "Play again Y/N?"
+            }
+            inquirer.prompt(playAgain).then(answer => {
+                if (answer.playAgain) {
+                    main();
+                } else {
+                    console.log("Thanks for playing!");
+                    return true;
+                }
+            });
         } else {
             fight(zombieType, zombieHealth);
         }
