@@ -299,7 +299,7 @@ function room8() {
         choices: ["west", "north"],
         message: "You can go west or north from here."
     }
-    if (Math.floor(Math.random() * 4) + 1 === 1) {
+    if (Math.floor(Math.random() * 3) + 1 === 1) {
         fight("A zombie", 10);
     }
     if (playerHealth > 0) {
