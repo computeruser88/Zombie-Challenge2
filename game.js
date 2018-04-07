@@ -117,9 +117,9 @@ function room2() {
     } else {
         inquirer.prompt(openTreasureChest).then(answer => {
             if (answer.openTreasureChest) {
-                console.log("You have found a sword! You discarded your " + weapon + " and picked it up.");
+                console.log("You have found a chainsaw! You discarded your " + weapon + " and picked it up.");
                 weapon = "sword";
-                weaponDamage = 20;
+                weaponDamage = 100;
                 console.log("Your key broke.");
                 hasKey = false;
             } else {
@@ -207,7 +207,7 @@ function room5() {
     }
     if (playerHealth > 0) {
         console.log("You have survived the Zombie Challenge. Congratulations, you're still alive!");
-        console.log("You killed "+ killCount + " zombies.");
+        console.log("You killed " + killCount + " zombies.");
         inquirer.prompt(playAgain).then(answer => {
             if (answer.playAgain) {
                 main();
@@ -244,9 +244,9 @@ function room6() {
     } else {
         inquirer.prompt(openTreasureChest).then(answer => {
             if (answer.openTreasureChest) {
-                console.log("You have found a chainsaw! You discarded your " + weapon + " and picked it up.");
+                console.log("You have found a sword! You discarded your " + weapon + " and picked it up.");
                 weapon = "chainsaw";
-                weaponDamage = 100;
+                weaponDamage = 50;
                 console.log("Your key broke.");
                 hasKey = false;
             } else {
@@ -365,7 +365,5 @@ function fight(zombieType, zombieHealth) {
         console.log("You have " + playerHealth + " health left.\n");
         killCount++;
     }
-
 }
-
 main();
