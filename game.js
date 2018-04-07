@@ -51,6 +51,7 @@ function room0() {
 }
 
 function room1() {
+    console.log("In this room there is a portrait of a family hanging on the north wall. Blood stains are streaked across it.");
     var pickUpWeapon = {
         type: "confirm",
         name: "pickUpWeapon",
@@ -262,7 +263,7 @@ function room6() {
 
 }
 function room7() {
-    console.log("You have entered the dining room. There is something eerie about this...");
+    console.log("You have entered the dining room. There is something eerie about this place...");
     console.log("Oh no!");
     fight("A zombie mutant", 150);
     var direction = {
@@ -282,7 +283,7 @@ function room7() {
     }
 }
 function room8() {
-    console.log("You have entered the kitchen. You can hear teeth loudly gnashing to the north!");
+    console.log("You have entered the kitchen. You can hear teeth loudly gnashing. Your destiny awaits you to the north!");
     var pickUpKnife = {
         type: "confirm",
         name: "pickUpKnife",
