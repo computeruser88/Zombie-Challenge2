@@ -98,7 +98,7 @@ function room2() {
     var direction = {
         type: "confirm",
         name: "goEast",
-        message: "The only door goes east. Are you ready to proceed Y/N?"
+        message: "The only door goes west. Are you ready to proceed Y/N?"
     }
     console.log("You have found a locked treasure chest!");
     if (hasKey === false) {
