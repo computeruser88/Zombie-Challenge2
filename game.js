@@ -35,7 +35,7 @@ function room0() {
     if (playerHealth > 0) {
         inquirer.prompt(pickUpWeapon).then(answer => {
             if (answer.pickUpWeapon) {
-                if (weapon !== "fists"){
+                if (weapon !== "fists") {
                     console.log("You discarded your " + weapon + ".");
                 }
                 weapon = "rock";
@@ -369,4 +369,6 @@ function fight(zombieType, zombieHealth) {
         killCount++;
     }
 }
+
+
 main();
